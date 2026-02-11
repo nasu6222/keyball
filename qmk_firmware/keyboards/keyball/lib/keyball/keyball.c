@@ -643,9 +643,11 @@ bool is_mouse_record_kb(uint16_t keycode, keyrecord_t* record) {
 #endif
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
-    // store last keycode, row, and col for OLED
+#ifdef OLED_ENABLE
     keyball.last_kc  = keycode;
     keyball.last_pos = record->event.key;
+#endif
+
 
 #ifdef OLED_ENABLE
     pressing_keys_update(keycode, record);
