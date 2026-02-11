@@ -646,12 +646,9 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 #ifdef OLED_ENABLE
     keyball.last_kc  = keycode;
     keyball.last_pos = record->event.key;
-#endif
-
-
-#ifdef OLED_ENABLE
     pressing_keys_update(keycode, record);
 #endif
+
 
     if (!process_record_user(keycode, record)) {
         return false;
