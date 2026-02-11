@@ -40,3 +40,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
 #define TAPPING_TERM 170
 #define HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_TERM 180
+#define TAPPING_TOGGLE 2
